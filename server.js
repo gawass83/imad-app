@@ -10,15 +10,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/articleone', function (req, res) {
-  res.sendFile('article one will be requested here');
+  res.send('article one will be requested here');
 });
 
 app.get('/articletwo',function(req,res){
-    res.sendFile('article two will ne rqested here');
+    res.send('article two will ne rqested here');
 });
 
 app.get('/articlethree',function(req,res){
-    res.sendFile('article three will be requested here');
+    res.send('article three will be requested here');
     
 });
 
