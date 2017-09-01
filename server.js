@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articles{
-    articleone={
+    articleone:{{
                 title:'Article one | Shubham Gawas',
                 heading:'Article one',
                 date:'Sept 5',
@@ -17,44 +17,18 @@ var articles{
                              this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
                              </p>
                     
-                    
-                        <p>
-                             this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
-                        </p> 
-             `           },
-    articletwo={
+        `         },
+    articletwo:{
          title:'Article two | Shubham Gawas',
                 heading:'Article two',
                 date:'Sept 5',
                 content:
             `
                             <p>
-                             this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
-                             </p>
-                    
-                    
-                        <p>
-                             this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
-                        </p> 
-    },
-    articlethree={
-         title:'Article three | Shubham Gawas',
-                heading:'Article three',
-                date:'Sept 5',
-                content:
-            `
-                            <p>
-                             this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
-                             </p>
-                    
-                    
-                        <p>
-                             this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
-                        </p> 
-    },
+                             this is the content of my two article.
+                        </p> `
+    };
     
-            }
-
 function create(data)
 {
 
@@ -103,8 +77,8 @@ res.sendFile(path.join(__dirname,'ui','index.html'));
 
 
 
-app.get('/articletwo',function(req,res){
-    res.send(create(content(articleone)));
+app.get('/:articleName',function(req,res){
+    res.send(create(articles(articleName)));
 });
 
 
