@@ -5,10 +5,74 @@ var path=require('path');
 var app=express();
 app.use(morgan('combined'));
 
+var content={
+    title:'Article one | Shubham Gawas',
+    heading:'Article one',
+    date:'Sept 5',
+    content:
+`
+                <p>
+                 this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
+                 </p>
+        
+        
+            <p>
+                 this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
+            </p> 
+ `           
+};
+
+function create(data)
+{
+
+var title=data.title;
+var heading =data.heading;
+var content=data.content;
+var date=data.date;
+
+var htmltemplate=`
+
+<html>
+
+    <head>
+        
+    <title> ${title}</title>
+    </head>
+    
+    <body>
+        <div>
+            <a href="/">Home</a>
+        </div>
+        
+        <div>
+            <h3>
+${heading}
+</h3>
+        </div>
+        
+        
+        
+        <div>
+${date}
+</div>
+    ${content}
+    </body>
+</html>
+  `  ;
+
+    return htmltemplate;
+} 
+  
+  
 app.get('/',function(req,res){
 res.sendFile(path.join(__dirname,'ui','index.html'));
 });
 
+
+
+app.get('/articletwo',function(req,res){
+    res.send(create(content(articleone)));
+});
 
 
 app.get('/articletwo',function(req,res){
