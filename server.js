@@ -18,8 +18,8 @@ res.sendFile(path.join(__dirname,'ui','madi.png'));
 });
 
 
-var port=8080;
-app.listen(8080,function()
+var port=80;
+app.listen(80,function()
 {
     console.log('IMAD course app listenig on port ${port}');
 });
