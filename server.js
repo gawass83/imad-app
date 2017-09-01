@@ -6,8 +6,8 @@ var app=express();
 app.use(morgan('combined'));
 
 
-var articles{
-    articleone:{{
+var articles={
+    articleone :{
                 title:'Article one | Shubham Gawas',
                 heading:'Article one',
                 date:'Sept 5',
@@ -17,7 +17,7 @@ var articles{
                              this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
                              </p>
                     
-        `         },
+            `    },
     articletwo:{
          title:'Article two | Shubham Gawas',
                 heading:'Article two',
@@ -27,8 +27,9 @@ var articles{
                             <p>
                              this is the content of my two article.
                         </p> `
-    };
-    
+    },
+};
+
 function create(data)
 {
 
@@ -78,17 +79,11 @@ res.sendFile(path.join(__dirname,'ui','index.html'));
 
 
 app.get('/:articleName',function(req,res){
-    res.send(create(articles(articleName)));
+    var articleName=req.params.articleName;
+    res.send(create(articles[articleName]));
 });
 
 
-app.get('/articletwo',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','articletwo.html'));
-});
-
-app.get('/articleone',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','articleone.html'));
-});
 
 app.get('/articleone',function(req,res){
     res.send("Article one is requested here");
