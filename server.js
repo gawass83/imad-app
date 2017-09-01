@@ -5,22 +5,55 @@ var path=require('path');
 var app=express();
 app.use(morgan('combined'));
 
-var content={
-    title:'Article one | Shubham Gawas',
-    heading:'Article one',
-    date:'Sept 5',
-    content:
-`
-                <p>
-                 this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
-                 </p>
-        
-        
-            <p>
-                 this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
-            </p> 
- `           
-};
+
+var articles{
+    articleone={
+                title:'Article one | Shubham Gawas',
+                heading:'Article one',
+                date:'Sept 5',
+                content:
+            `
+                            <p>
+                             this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
+                             </p>
+                    
+                    
+                        <p>
+                             this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
+                        </p> 
+             `           },
+    articletwo={
+         title:'Article two | Shubham Gawas',
+                heading:'Article two',
+                date:'Sept 5',
+                content:
+            `
+                            <p>
+                             this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
+                             </p>
+                    
+                    
+                        <p>
+                             this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
+                        </p> 
+    },
+    articlethree={
+         title:'Article three | Shubham Gawas',
+                heading:'Article three',
+                date:'Sept 5',
+                content:
+            `
+                            <p>
+                             this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
+                             </p>
+                    
+                    
+                        <p>
+                             this is the content of my first articlethis is the content of my first articlevthis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first articlethis is the content of my first article
+                        </p> 
+    },
+    
+            }
 
 function create(data)
 {
